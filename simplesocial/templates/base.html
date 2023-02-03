@@ -28,12 +28,12 @@
         </div>
         <div class="navbar-nav ml-auto">
           {% if user.is_authenticated %}
-            {% comment %} <a class="nav-item nav-link" href="{% url 'posts:create' %}" class="btn btn-simple">Post</a> {% endcomment %}
-            {% comment %} <a class="nav-item nav-link" href="{% url 'groups:all' %}" class="btn btn-simple">Groups</a> {% endcomment %}
-            {% comment %} <a class="nav-item nav-link" href="{% url 'groups:create' %}" class="btn btn-simple">Create Group</a> {% endcomment %}
+            <a class="nav-item nav-link" href="{% url 'posts:create' %}" class="btn btn-simple">Post</a>
+            <a class="nav-item nav-link" href="{% url 'groups:all' %}" class="btn btn-simple">Groups</a>
+            <a class="nav-item nav-link" href="{% url 'groups:create' %}" class="btn btn-simple">Create Group</a>
             <a class="nav-item nav-link" href="{% url 'accounts:logout' %}" class="btn btn-simple">Log out</a>
           {% else %}
-            {% comment %} <a class="nav-item nav-link" href="{% url 'groups:all' %}"class="btn btn-simple">Groups</a> {% endcomment %}
+            <a class="nav-item nav-link" href="{% url 'groups:all' %}"class="btn btn-simple">Groups</a>
             <a class="nav-item nav-link" href="{% url 'accounts:login' %}" class="btn btn-simple">Log in</a>
             <a class="nav-item nav-link" href="{% url 'accounts:signup' %}" class="btn btn-simple">Sign up</a>
           {% endif %}
